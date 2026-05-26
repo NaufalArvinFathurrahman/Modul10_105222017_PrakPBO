@@ -67,10 +67,16 @@ public class App {
         Buku b1 = new Buku("ISBN-001", "Pemrograman Java");
         Buku b2 = new Buku("ISBN-002", "Struktur Data");
         Buku b3 = new Buku("ISBN-003", "Basis Data");
+        Buku b4 = new Buku("ISBN-004", "Algoritma Lanjut");
+        Buku b5 = new Buku("ISBN-005", "Zaman AI");
+        Buku b6 = new Buku("ISBN-006", "Kalkulus");
 
         katalogBuku.put(b1.isbn, b1);
         katalogBuku.put(b2.isbn, b2);
         katalogBuku.put(b3.isbn, b3);
+        katalogBuku.put(b4.isbn, b4);
+        katalogBuku.put(b5.isbn, b5);
+        katalogBuku.put(b6.isbn, b6);
 
         System.out.println("--- HASIL SOAL 1 ---");
         System.out.println("Cari instan ISBN-002: " + katalogBuku.get("ISBN-002").judul);
@@ -104,6 +110,9 @@ public class App {
         Anggota a5 = new Anggota("DSN-02", "Prof. Dina", "Dosen");
         tambahKeAntrean(antreanPeminjaman, a5, b2);
         tambahKeAntrean(antreanPeminjaman, a3, b1);
+        tambahKeAntrean(antreanPeminjaman, a2, b4);
+        tambahKeAntrean(antreanPeminjaman, a1, b5);
+        tambahKeAntrean(antreanPeminjaman, a3, b6);
 
         System.out.println("\n--- HASIL SOAL 3 ---");
         System.out.println("Isi Antrean Peminjaman Awal (Tanpa Dikeluarkan):");
@@ -156,7 +165,7 @@ public class App {
             judulDipinjam.add(katalogBuku.get(isbn).judul);
         }
         Collections.sort(judulDipinjam);
-        System.out.println("Laporan Buku Sedang Dipinjam (Diurutkan A-Z):");
+        System.out.println("Laporan Buku Sedang Dipinjam :");
         for (String judul : judulDipinjam) {
             System.out.println("- " + judul);
         }
