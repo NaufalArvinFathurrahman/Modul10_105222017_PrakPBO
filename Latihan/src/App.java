@@ -148,5 +148,17 @@ public class App {
                 }
             }
         }
+
+        // Soal 5
+        System.out.println("\n--- HASIL SOAL 5 ---");
+        List<String> judulDipinjam = new ArrayList<>();
+        for (String isbn : bukuSedangDipinjam) {
+            judulDipinjam.add(katalogBuku.get(isbn).judul);
+        }
+        Collections.sort(judulDipinjam);
+        System.out.println("Laporan Buku Sedang Dipinjam (Diurutkan A-Z):");
+        for (String judul : judulDipinjam) {
+            System.out.println("- " + judul);
+        }
     }
 }
